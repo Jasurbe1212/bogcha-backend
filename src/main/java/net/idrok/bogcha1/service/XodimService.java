@@ -1,8 +1,8 @@
 package net.idrok.bogcha1.service;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import net.idrok.bogcha1.entity.Xodim;
@@ -14,8 +14,8 @@ public class XodimService {
     @Autowired
     XodimRepository xodimRepository;
 
-    public List<Xodim> getAll() {
-        return xodimRepository.findAll();
+    public Page<Xodim> getAll(String key, Pageable pageable) {
+        return xodimRepository.findAllByIsmContainingIgnoreCaseOrFamilyaContainingIgnoreCase(key, key, pageable);
     }
 
     public Xodim getById(Long id) {

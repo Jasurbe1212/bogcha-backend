@@ -28,6 +28,11 @@ public class Xona {
 
     private String info;
 
+    
+
+    public Xona() {
+    }
+
     public Long getId() {
         return id;
     }

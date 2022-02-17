@@ -1,6 +1,5 @@
 package net.idrok.bogcha1.service;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -16,7 +15,7 @@ public class BinoService {
     BinoRepository binoRepository;
 
     public Page<Bino> getAll(String key, Pageable pageable) {
-        return binoRepository.findAllByNomContainingIgnoreCaseOrInfoContainingIgnoreCase(key, key , pageable);
+        return binoRepository.findAllByNomContainingIgnoreCaseOrInfoContainingIgnoreCase(key, key, pageable);
     }
 
     public Bino getById(Long id) {

@@ -1,5 +1,7 @@
 package net.idrok.bogcha1.entity;
 
+import java.sql.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,18 +18,25 @@ public class Xodim {
     private Long id;
 
     @Column(length = 30, unique = true,nullable = false)
-    private String Ism;
-    private String Familya;
+    private String ism;
+    private String familya;
     private String Sharif;
-    private String tugkun;
-    private String kelsana;
-    private String ketsana;
+    private Date tugkun;
+    private Date kelsana;
+    private Date ketsana;
     private String telnomer;
 
 
     @ManyToOne
     private Lavozim lavozim;
     private String info;
+
+    
+
+    
+    public Xodim() {
+    }
+
     
     public Long getId() {
         return id;
@@ -36,16 +45,16 @@ public class Xodim {
         this.id = id;
     }
     public String getIsm() {
-        return Ism;
+        return ism;
     }
     public void setIsm(String ism) {
-        Ism = ism;
+        this.ism = ism;
     }
     public String getFamilya() {
-        return Familya;
+        return familya;
     }
     public void setFamilya(String familya) {
-        Familya = familya;
+        this.familya = familya;
     }
     public String getSharif() {
         return Sharif;
@@ -53,22 +62,22 @@ public class Xodim {
     public void setSharif(String sharif) {
         Sharif = sharif;
     }
-    public String getTugkun() {
+    public Date getTugkun() {
         return tugkun;
     }
-    public void setTugkun(String tugkun) {
+    public void setTugkun(Date tugkun) {
         this.tugkun = tugkun;
     }
-    public String getKelsana() {
+    public Date getKelsana() {
         return kelsana;
     }
-    public void setKelsana(String kelsana) {
+    public void setKelsana(Date kelsana) {
         this.kelsana = kelsana;
     }
-    public String getKetsana() {
+    public Date getKetsana() {
         return ketsana;
     }
-    public void setKetsana(String ketsana) {
+    public void setKetsana(Date ketsana) {
         this.ketsana = ketsana;
     }
     public String getTelnomer() {
@@ -89,8 +98,8 @@ public class Xodim {
     public void setInfo(String info) {
         this.info = info;
     }
-
     
-
+   
+  
     
 }

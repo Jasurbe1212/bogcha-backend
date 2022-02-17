@@ -19,7 +19,11 @@ public class Bino {
     private String info;
 
 
+    
 
+    public Bino() {
+    }
+    
     public Long getId() {
         return id;
     }

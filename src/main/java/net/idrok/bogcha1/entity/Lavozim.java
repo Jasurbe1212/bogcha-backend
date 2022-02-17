@@ -19,7 +19,10 @@ public class Lavozim {
     private String info;
 
 
+    
 
+    public Lavozim() {
+    }
     public Long getId() {
         return id;
     }

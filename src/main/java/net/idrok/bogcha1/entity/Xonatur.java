@@ -19,7 +19,11 @@ public class Xonatur {
     private String info;
 
 
+    
 
+    public Xonatur() {
+    }
+    
     public Long getId() {
         return id;
     }
