@@ -35,9 +35,9 @@ public class XodimService {
         return null;
     }
 
-    public void delete(Xodim xona) {
+    public void delete(Xodim xodim) {
 
-        xodimRepository.delete(xona);
+        xodimRepository.delete(xodim);
     }
 
     public void deleteById(Long id) {
