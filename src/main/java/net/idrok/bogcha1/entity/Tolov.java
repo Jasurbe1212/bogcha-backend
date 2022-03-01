@@ -1,5 +1,6 @@
 package net.idrok.bogcha1.entity;
 import java.sql.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,7 +19,7 @@ public class Tolov {
     private String miqdor;
     @ManyToOne
     private Tolovtur tolovtur;
-    private Date sana;
+    private LocalDate sana;
     @ManyToOne
     private Bola bola;
     private String info;
@@ -43,10 +44,10 @@ public class Tolov {
     public void setTolovtur(Tolovtur tolovtur) {
         this.tolovtur = tolovtur;
     }
-    public Date getSana() {
+    public LocalDate getSana() {
         return sana;
     }
-    public void setSana(Date sana) {
+    public void setSana(LocalDate sana) {
         this.sana = sana;
     }
     public Bola getBola() {

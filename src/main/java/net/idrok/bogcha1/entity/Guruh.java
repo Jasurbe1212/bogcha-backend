@@ -1,6 +1,7 @@
 package net.idrok.bogcha1.entity;
 
 import java.sql.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -21,8 +22,8 @@ public class Guruh {
     private String nom;
     @ManyToOne
     private Xodim xodim;
-    private Date ocsana;
-    private Date yopsana;
+    private LocalDate ocsana;
+    private LocalDate yopsana;
     private String info;
 
     public Guruh() {
@@ -52,19 +53,21 @@ public class Guruh {
         this.xodim = xodim;
     }
 
-    public Date getOcsana() {
+    
+
+    public LocalDate getOcsana() {
         return ocsana;
     }
 
-    public void setOcsana(Date ocsana) {
+    public void setOcsana(LocalDate ocsana) {
         this.ocsana = ocsana;
     }
 
-    public Date getYopsana() {
+    public LocalDate getYopsana() {
         return yopsana;
     }
 
-    public void setYopsana(Date yopsana) {
+    public void setYopsana(LocalDate yopsana) {
         this.yopsana = yopsana;
     }
 

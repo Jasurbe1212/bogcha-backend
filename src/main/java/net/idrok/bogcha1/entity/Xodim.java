@@ -1,6 +1,7 @@
 package net.idrok.bogcha1.entity;
 
-import java.sql.Date;
+
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -21,9 +22,9 @@ public class Xodim {
     private String ism;
     private String familya;
     private String sharif;
-    private Date tugkun;
-    private Date kelsana;
-    private Date ketsana;
+    private LocalDate tugkun;
+    private LocalDate kelsana;
+    private LocalDate ketsana;
     private String telnomer;
     private XodimStatus xodimStatus;
 
@@ -66,27 +67,28 @@ public class Xodim {
         this.sharif = sharif;
     }
 
-    public Date getTugkun() {
+
+    public LocalDate getTugkun() {
         return tugkun;
     }
 
-    public void setTugkun(Date tugkun) {
+    public void setTugkun(LocalDate tugkun) {
         this.tugkun = tugkun;
     }
 
-    public Date getKelsana() {
+    public LocalDate getKelsana() {
         return kelsana;
     }
 
-    public void setKelsana(Date kelsana) {
+    public void setKelsana(LocalDate kelsana) {
         this.kelsana = kelsana;
     }
 
-    public Date getKetsana() {
+    public LocalDate getKetsana() {
         return ketsana;
     }
 
-    public void setKetsana(Date ketsana) {
+    public void setKetsana(LocalDate ketsana) {
         this.ketsana = ketsana;
     }
 

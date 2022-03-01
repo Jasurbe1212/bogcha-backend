@@ -3,6 +3,7 @@ package net.idrok.bogcha1.entity;
 import javax.persistence.Table;
 
 import java.sql.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -22,7 +23,7 @@ public class Guruhxona {
     @ManyToOne
     private Xona xona;
 
-    private Date vaqt;
+    private LocalDate vaqt;
     private String info;
 
     public Guruhxona() {
@@ -52,11 +53,11 @@ public class Guruhxona {
         this.xona = xona;
     }
 
-    public Date getVaqt() {
+    public LocalDate getVaqt() {
         return vaqt;
     }
 
-    public void setVaqt(Date vaqt) {
+    public void setVaqt(LocalDate vaqt) {
         this.vaqt = vaqt;
     }
 

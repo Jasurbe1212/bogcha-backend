@@ -1,5 +1,6 @@
 package net.idrok.bogcha1.entity;
-import java.sql.Date;
+
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,11 +20,11 @@ public class Bola {
     private String ism;
     private String familya;
     private String sharif;
-    private Date tugkun;
+    private LocalDate tugkun;
     private String ota;
     private String ona;
-    private Date kelsana;
-    private Date ketsana;
+    private LocalDate kelsana;
+    private LocalDate ketsana;
     private String telnomer;
     @ManyToOne
     private Guruh guruh;
@@ -56,10 +57,10 @@ public class Bola {
     public void setSharif(String sharif) {
         this.sharif = sharif;
     }
-    public Date getTugkun() {
+    public LocalDate getTugkun() {
         return tugkun;
     }
-    public void setTugkun(Date tugkun) {
+    public void setTugkun(LocalDate tugkun) {
         this.tugkun = tugkun;
     }
     public String getOta() {
@@ -74,16 +75,16 @@ public class Bola {
     public void setOna(String ona) {
         this.ona = ona;
     }
-    public Date getKelsana() {
+    public LocalDate getKelsana() {
         return kelsana;
     }
-    public void setKelsana(Date kelsana) {
+    public void setKelsana(LocalDate kelsana) {
         this.kelsana = kelsana;
     }
-    public Date getKetsana() {
+    public LocalDate getKetsana() {
         return ketsana;
     }
-    public void setKetsana(Date ketsana) {
+    public void setKetsana(LocalDate ketsana) {
         this.ketsana = ketsana;
     }
     public String getTelnomer() {
