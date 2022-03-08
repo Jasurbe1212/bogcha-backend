@@ -5,7 +5,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import net.idrok.bogcha1.entity.Bino;
+import net.idrok.bogcha1.entity.Bino; 
 
 @Repository
 public interface BinoRepository extends JpaRepository<Bino, Long> {

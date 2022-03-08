@@ -1,6 +1,4 @@
-package net.idrok.bogcha1.entity;
-
-import javax.persistence.Table;
+package net.idrok.bogcha1.entity.Omborxona;
 
 import java.time.LocalDate;
 
@@ -9,23 +7,23 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
-@Table(name="guruhxona")
-public class Guruhxona {
-    
+@Table(name="chiqim")
+public class Chiqim {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @ManyToOne
-    private Guruh guruh;
-    @ManyToOne
-    private Xona xona;
+    private Mahsulot mahsulot;
 
     private LocalDate vaqt;
+    private String chiqimtur;
     private String info;
-
-    public Guruhxona() {
+    
+    public Chiqim() {
     }
 
     public Long getId() {
@@ -36,20 +34,12 @@ public class Guruhxona {
         this.id = id;
     }
 
-    public Guruh getGuruh() {
-        return guruh;
+    public Mahsulot getMahsulot() {
+        return mahsulot;
     }
 
-    public void setGuruh(Guruh guruh) {
-        this.guruh = guruh;
-    }
-
-    public Xona getXona() {
-        return xona;
-    }
-
-    public void setXona(Xona xona) {
-        this.xona = xona;
+    public void setMahsulot(Mahsulot mahsulot) {
+        this.mahsulot = mahsulot;
     }
 
     public LocalDate getVaqt() {
@@ -60,6 +50,14 @@ public class Guruhxona {
         this.vaqt = vaqt;
     }
 
+    public String getChiqimtur() {
+        return chiqimtur;
+    }
+
+    public void setChiqimtur(String chiqimtur) {
+        this.chiqimtur = chiqimtur;
+    }
+
     public String getInfo() {
         return info;
     }
@@ -68,7 +66,9 @@ public class Guruhxona {
         this.info = info;
     }
     
- 
+
     
 
-}   
+    
+    
+}
