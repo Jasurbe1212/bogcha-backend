@@ -24,7 +24,7 @@ import net.idrok.bogcha1.service.Omborxona.MahsulotService;
 public class MahsulotController {
     
     @Autowired
-    MahsulotService mahsulotService;
+    MahsulotService mahsulotService;    
     @GetMapping()
     public ResponseEntity<Page<Mahsulot>> getAll(@RequestParam(name = "key", required = false) String key ,Pageable pageable) {
         if(key == null) key = "";

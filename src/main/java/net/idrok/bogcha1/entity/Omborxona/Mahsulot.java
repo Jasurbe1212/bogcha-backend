@@ -1,5 +1,7 @@
 package net.idrok.bogcha1.entity.Omborxona;
 
+import java.time.LocalDate;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,7 +25,7 @@ public class Mahsulot {
     private Long narx;
     @ManyToOne
     private Yetkazuvchi yetkazuvchi;
-    
+    private LocalDate vaqt;
     private String info;
 
     public Mahsulot() {
@@ -84,6 +86,14 @@ public class Mahsulot {
 
     public void setInfo(String info) {
         this.info = info;
+    }
+
+    public LocalDate getVaqt() {
+        return vaqt;
+    }
+
+    public void setVaqt(LocalDate vaqt) {
+        this.vaqt = vaqt;
     }
 
     
