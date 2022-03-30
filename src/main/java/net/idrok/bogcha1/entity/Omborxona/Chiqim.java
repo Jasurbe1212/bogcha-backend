@@ -23,7 +23,7 @@ public class Chiqim {
     private String chiqimtur;
     private String info;
     
-    public Chiqim() {
+    public Chiqim() {   
     }
 
     public Long getId() {

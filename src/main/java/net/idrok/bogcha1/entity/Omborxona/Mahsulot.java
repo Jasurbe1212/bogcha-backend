@@ -9,6 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import net.idrok.bogcha1.entity.Mahsulotolcham;
+
 @Entity
 @Table(name="mahsulot")
 public class Mahsulot {
@@ -27,6 +29,7 @@ public class Mahsulot {
     private Yetkazuvchi yetkazuvchi;
     private LocalDate vaqt;
     private String info;
+    private Mahsulotolcham mahsulotolcham;
 
     public Mahsulot() {
     }
@@ -94,6 +97,14 @@ public class Mahsulot {
 
     public void setVaqt(LocalDate vaqt) {
         this.vaqt = vaqt;
+    }
+
+    public Mahsulotolcham getMahsulotolcham() {
+        return mahsulotolcham;
+    }
+
+    public void setMahsulotolcham(Mahsulotolcham mahsulotolcham) {
+        this.mahsulotolcham = mahsulotolcham;
     }
 
     
