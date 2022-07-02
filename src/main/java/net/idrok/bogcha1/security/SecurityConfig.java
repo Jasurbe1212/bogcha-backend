@@ -12,14 +12,9 @@ import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.crypto.argon2.Argon2PasswordEncoder;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
@@ -51,7 +46,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http = http.cors().and().csrf().disable();
         // Barcha so'rovlar yopish
         http.authorizeRequests()
-                // fan'ni GET qilsishni umuman ochib qo'yish
+                //  GET qilsishni umuman ochib qo'yish
                 .antMatchers(HttpMethod.POST, "/api/account/auth").permitAll()
                 .antMatchers(HttpMethod.POST, "/api/account/register").permitAll()
                 // User huquqlari
@@ -63,6 +58,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         // Fiterni berish
         http.addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class);
+
+        // super.configure(http);
 
     }
 

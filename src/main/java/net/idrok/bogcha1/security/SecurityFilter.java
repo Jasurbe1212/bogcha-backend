@@ -29,7 +29,6 @@ public class SecurityFilter extends OncePerRequestFilter {
             // Bearer ni olib tashlash
             token = token.substring(7);
             if( jwtUtil.validateToken(token)){
-
                 UserDetails userDetails = new User(jwtUtil.getLogin(token), "",  Set.of(new SimpleGrantedAuthority(jwtUtil.getRole(token))));
 
                 UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(

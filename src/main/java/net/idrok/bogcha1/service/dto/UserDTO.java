@@ -3,12 +3,6 @@ package net.idrok.bogcha1.service.dto;
 import net.idrok.bogcha1.entity.Role;
 import net.idrok.bogcha1.entity.User;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 
 public class UserDTO {

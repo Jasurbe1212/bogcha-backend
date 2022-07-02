@@ -1,13 +1,14 @@
 package net.idrok.bogcha1.controller;
 
-import com.fasterxml.jackson.annotation.OptBoolean;
-import net.idrok.bogcha1.entity.Role;
+
 import net.idrok.bogcha1.entity.User;
 import net.idrok.bogcha1.security.JwtUtil;
 import net.idrok.bogcha1.security.Token;
 import net.idrok.bogcha1.security.UserMaxsus;
 import net.idrok.bogcha1.service.UserService;
 import net.idrok.bogcha1.service.dto.UserDTO;
+import net.idrok.bogcha1.service.impl.UserServiceImpl;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

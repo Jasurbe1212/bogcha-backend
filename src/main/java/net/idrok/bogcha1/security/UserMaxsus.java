@@ -28,7 +28,7 @@ public class UserMaxsus implements UserDetails {
 
 
 
-
+ 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return authority;

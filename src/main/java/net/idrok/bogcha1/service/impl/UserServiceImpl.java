@@ -1,7 +1,6 @@
 package net.idrok.bogcha1.service.impl;
 
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.Optional;
 
 import net.idrok.bogcha1.entity.Role;
@@ -9,7 +8,6 @@ import net.idrok.bogcha1.service.dto.UserDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -81,6 +79,7 @@ public class UserServiceImpl implements UserService{
     @Override
     public UserDTO getCurrentUser() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        System.out.println(auth.getPrincipal().getClass() + "something");
         if(auth.getPrincipal() instanceof UserDetails){
             UserDetails userDetails = (UserDetails) auth.getPrincipal();
             User u = userRepository.findByLogin(userDetails.getUsername()).orElseThrow(()->  new RuntimeException("not found"));
