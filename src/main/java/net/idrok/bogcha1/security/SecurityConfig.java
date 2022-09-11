@@ -51,6 +51,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.POST, "/api/account/register").permitAll()
                 // User huquqlari
                 .antMatchers("/api/user/**").authenticated()
+                .antMatchers("/api/account/**").authenticated()
+
                 // QOLGAN BARCHASI FAQAT ADMINGA
                 .anyRequest().hasAnyRole(Role.ADMIN.toString())
                 .and()

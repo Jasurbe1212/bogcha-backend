@@ -35,11 +35,11 @@ public class Bogcha1Application {
 	public void birlamchiAdminlarniBelgilash(){
 
 
-		if(userRepository.findByLogin("admin123").isEmpty()){
+		if(userRepository.findByLogin("admin12").isEmpty()){
 			User user = new User();
 			user.setIsm("Administrator");
-			user.setLogin("admin123");
-			user.setParol(encoder.encode("admin123"));
+			user.setLogin("admin12");
+			user.setParol(encoder.encode("admin12"));
 			user.setAktiv(true);
 			user.setRegVaqt(LocalDateTime.now());
 			user.setRole(Role.ADMIN);
@@ -73,7 +73,7 @@ public class Bogcha1Application {
 
 		// Yaratilgan JwtUtilni sinaymiz
 		LOG.info("----------------");
-		String token = jwtUtil.generateToken("admin123", "admin");
+		String token = jwtUtil.generateToken("admin12", "admin");
 		LOG.info(token);
 		LOG.info("----------------");
 		LOG.info("Haqiqiy: "+jwtUtil.validateToken(token));

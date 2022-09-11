@@ -10,6 +10,7 @@ import net.idrok.bogcha1.service.dto.UserDTO;
 import net.idrok.bogcha1.service.impl.UserServiceImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.web.bind.annotation.*;
@@ -41,6 +42,13 @@ public class AccountController {
     @PostMapping("/register")
     public UserDTO register(@RequestBody User user){
         return new UserDTO(userService.create(user));
+    }
+
+    @PostMapping("/update")
+    public ResponseEntity<UserDTO> updateAccount(@RequestBody User user){
+        if(getCurrentuser().getId() == user.getId())
+            return ResponseEntity.ok(new UserDTO(userService.update(user)));
+        return  ResponseEntity.badRequest().build();
     }
 
     @GetMapping("/current")
